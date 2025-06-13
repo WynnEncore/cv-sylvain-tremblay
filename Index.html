@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Sylvain Tremblay</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f8f9fa;
+        padding: 20px;
+    }
+    
+    .cv-container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .header {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        color: white;
+        padding: 40px;
+        text-align: center;
+    }
+    
+    .header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
+    
+    .header h2 {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+        color: #ecf0f1;
+        font-weight: 400;
+    }
+    
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .main-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 0;
+    }
+    
+    .sidebar {
+        background: #f8f9fa;
+        padding: 40px 30px;
+        border-right: 1px solid #e9ecef;
+    }
+    
+    .content {
+        padding: 40px;
+    }
+    
+    .section {
+        margin-bottom: 35px;
+    }
+    
+    .section h3 {
+        color: #2c3e50;
+        font-size: 1.3em;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #3498db;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .profile-text {
+        font-size: 1.1em;
+        line-height: 1.7;
+        color: #555;
+        text-align: justify;
+    }
+    
+    .skills-grid {
+        display: grid;
+        gap: 15px;
+    }
+    
+    .skill-category {
+        background: white;
+        padding: 15px;
+        border-radius: 6px;
+        border-left: 4px solid #3498db;
+    }
+    
+    .skill-category h4 {
+        color: #2c3e50;
+        margin-bottom: 8px;
+        font-size: 0.95em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .skills-list {
+        color: #666;
+        font-size: 0.9em;
+    }
+    
+    .job {
+        margin-bottom: 35px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .job:last-child {
+        border-bottom: none;
+    }
+    
+    .job-header {
+        margin-bottom: 15px;
+    }
+    
+    .job-title {
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 5px;
+    }
+    
+    .job-company {
+        font-weight: 500;
+        color: #3498db;
+        margin-bottom: 5px;
+    }
+    
+    .job-period {
+        color: #7f8c8d;
+        font-size: 0.9em;
+        font-style: italic;
+    }
+    
+    .job-description {
+        margin-top: 15px;
+    }
+    
+    .job-description ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    .job-description li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 8px;
+        color: #555;
+    }
+    
+    .job-description li::before {
+        content: "▶";
+        position: absolute;
+        left: 0;
+        color: #3498db;
+        font-size: 0.8em;
+        top: 2px;
+    }
+    
+    .education-item {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: white;
+        border-radius: 6px;
+        border-left: 4px solid #e74c3c;
+    }
+    
+    .education-title {
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 5px;
+    }
+    
+    .education-school {
+        color: #7f8c8d;
+        font-size: 0.9em;
+        margin-bottom: 3px;
+    }
+    
+    .education-year {
+        color: #95a5a6;
+        font-size: 0.85em;
+        font-style: italic;
+    }
+    
+    .highlight {
+        background: linear-gradient(120deg, #a8e6cf 0%, #dcedc8 100%);
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+        .main-content {
+            grid-template-columns: 1fr;
+        }
+        
+        .contact-info {
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .header h1 {
+            font-size: 2em;
+        }
+    }
+    
+    @media print {
+        body {
+            background: white;
+            padding: 0;
+        }
+        
+        .cv-container {
+            box-shadow: none;
+            border-radius: 0;
+        }
+    }
+</style>
+```
+
+</head>
+<body>
+    <div class="cv-container">
+        <header class="header">
+            <h1>SYLVAIN TREMBLAY</h1>
+            <h2>Senior Backend Developer & AI Expert</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📞</span>
+                    <span>514-570-9861</span>
+                </div>
+                <div class="contact-item">
+                    <span>✉️</span>
+                    <span>sylvaintremblay1999@outlook.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>Greater Montreal Area, QC</span>
+                </div>
+            </div>
+        </header>
+
+```
+    <div class="main-content">
+        <aside class="sidebar">
+            <section class="section">
+                <h3>Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Languages & Frameworks</h4>
+                        <div class="skills-list">PHP (10+ years) • Laravel • Twig<br>HTML5 • CSS3 • JavaScript • jQuery</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>CMS & Platforms</h4>
+                        <div class="skills-list">CraftCMS • WordPress<br>Custom Module Development</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Artificial Intelligence</h4>
+                        <div class="skills-list"><span class="highlight">AI Prompt Engineering</span><br>ChatGPT • AI Automation<br>Conversational Solutions</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Databases</h4>
+                        <div class="skills-list">MySQL • Query Optimization<br>Data Architecture</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>DevOps & Tools</h4>
+                        <div class="skills-list">Git • Docker • DDEV<br>API Integration • Deployment</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Management & Leadership</h4>
+                        <div class="skills-list">Agile/Scrum Methodologies<br>Technical Leadership<br>Team Management</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Languages</h4>
+                        <div class="skills-list"><strong>Bilingual</strong> French/English</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>Education</h3>
+                <div class="education-item">
+                    <div class="education-title">Certificate in Digital Technologies</div>
+                    <div class="education-school">University of Advancing Technology</div>
+                    <div class="education-year">1998-1999</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-title">Diploma in Computer Science</div>
+                    <div class="education-school">CÉGEP St-Jean-sur-Richelieu</div>
+                    <div class="education-year">1988-1991</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-title">Diploma in Pure Sciences</div>
+                    <div class="education-school">CÉGEP St-Jean-sur-Richelieu</div>
+                    <div class="education-year">1983-1985</div>
+                </div>
+            </section>
+        </aside>
+
+        <main class="content">
+            <section class="section">
+                <h3>Professional Profile</h3>
+                <p class="profile-text">
+                    <strong>Senior backend developer</strong> with over <span class="highlight">25 years of experience</span> specializing in PHP, Laravel, CraftCMS, and WordPress. 
+                    Recognized expert in <span class="highlight">AI Prompt Engineering</span> and design of solutions based on generative artificial intelligence. 
+                    Technical leader with a human-centered approach that promotes collaboration and team well-being. 
+                    Passionate about developing high-performance and scalable solutions, with a constant commitment to code quality and optimal user experience.
+                </p>
+            </section>
+
+            <section class="section">
+                <h3>Professional Experience</h3>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Senior Backend Developer & Prompt Engineering Expert</div>
+                        <div class="job-company">Freelance/Consultant</div>
+                        <div class="job-period">January 2023 – Present</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Development of advanced backend components and modules on <strong>CraftCMS</strong> and <strong>WordPress</strong></li>
+                            <li>Design and optimization of high-performance <strong>PHP/Twig/MySQL</strong> backend solutions</li>
+                            <li>Development of <span class="highlight">internal chatbots and conversational assistants</span> based on generative AI</li>
+                            <li>Advanced API integration for complex business workflow automation</li>
+                            <li>Research and development of innovative tools using artificial intelligence technologies</li>
+                            <li>Responsibility for <strong>team well-being</strong> and employee satisfaction index monitoring</li>
+                            <li>Close collaboration with project and design teams to ensure deliverable quality</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Senior Backend Developer</div>
+                        <div class="job-company">Web Agency</div>
+                        <div class="job-period">February 2021 – December 2022</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li><strong>PHP</strong> backend development for complex web applications</li>
+                            <li>Advanced deployment and customization of <strong>CraftCMS</strong> solutions</li>
+                            <li>Development of <strong>RESTful API</strong> interfaces and third-party system integration</li>
+                            <li>Setup and management of development and production environments</li>
+                            <li>Performance optimization and continuous project improvement</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Software Developer</div>
+                        <div class="job-company">Academic Project/ERP</div>
+                        <div class="job-period">March 2020 – February 2021</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Development of a <strong>personalized language learning software</strong> for doctoral project</li>
+                            <li>Enhancement of an <strong>internal ERP</strong> for customer management, incidents, and billing</li>
+                            <li>Technology stack: <strong>PHP (CodeIgniter)</strong>, complete frontend integration</li>
+                            <li>Evolutionary maintenance and optimization of existing systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Freelance Web Developer</div>
+                        <div class="job-company">Diverse Clientele</div>
+                        <div class="job-period">September 2013 – February 2020</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Development of websites and back-office solutions <strong>PHP/MySQL</strong></li>
+                            <li>Complete frontend integration: <strong>HTML5, CSS3, JavaScript, jQuery</strong></li>
+                            <li>Development of custom <strong>WordPress e-commerce</strong> sites</li>
+                            <li>Direct collaboration with clients for project customization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Previous Relevant Experience</div>
+                        <div class="job-company">Various Companies</div>
+                        <div class="job-period">1996 – 2013</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li><strong>Owner & Operations Director</strong> – Aqua Spa (2006-2013): Management of 15-employee team</li>
+                            <li><strong>Mobile Application Developer</strong> – Tangent Associates, FL (2001-2003): Solutions for major sports leagues</li>
+                            <li><strong>IT Project Manager</strong> – Flex Software, TX (2000-2001): Regional portals and advertising solutions</li>
+                            <li><strong>Analyst-Programmer</strong> – Mental health sector, AZ (2000-2001): Specialized clinical solutions</li>
+                            <li><strong>Programmer</strong> – Garantie Insurance Company, Montreal (1996-1997): Multi-user applications</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+```
+
+</body>
+</html>
