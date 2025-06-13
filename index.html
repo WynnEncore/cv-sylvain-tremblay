@@ -232,18 +232,29 @@
         }
     }
     
-    @media print {
-        @page { size: letter; margin: 1cm; }
-        body {
-            background: white;
-            padding: 0;
-        }
-        nav, footer, .no-print { display: none !important; }
-        .cv-container {
-            box-shadow: none;
-            border-radius: 0;
-        }
-    }
+@media print {
+  body {
+    font-size: 11pt;
+    line-height: 1.4;
+    font-family: Arial, sans-serif;
+    color: #000;
+  }
+
+  .section-title {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-top: 1.5em;
+  }
+
+  header, footer, nav, .no-print {
+    display: none;
+  }
+
+  @page {
+    size: A4;
+    margin: 1.5cm;
+  }
+}
 </style>
 
 
